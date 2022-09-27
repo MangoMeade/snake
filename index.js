@@ -1,13 +1,17 @@
 console.log('hi mom!', random(0, 5, false));
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-
+const scoreTag = document.querySelector('#score');
 let state = initialState();
 
 const x = (c) => Math.round((c * canvas.width) / state.cols);
 const y = (r) => Math.round((r * canvas.height) / state.rows);
 
 function draw() {
+	if (parseInt(scoreTag.innerHTML) !== state.score) {
+		scoreTag.innerHTML = state.score;
+	}
+
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 	// draw snake

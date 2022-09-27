@@ -61,6 +61,7 @@ const nextState = (state) => ({
 	snake: nextSnake(state),
 	crashed: didSnakeCrashed(state),
 	fruit: nextFruit(state),
+	score: didAteFruit(state) ? state.score + 1 : state.score,
 });
 
 const didAteFruit = (state) =>
