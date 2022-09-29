@@ -25,11 +25,13 @@ canvas {
 #side-btn-container {
 	display: flex;
 	width: 100%;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 /* CSS */
 .btn {
+	height: 10rem;
+	width: 10rem;
 	appearance: none;
 	background-color: #2ea44f;
 	border: 1px solid rgba(27, 31, 35, 0.15);
@@ -41,7 +43,7 @@ canvas {
 	display: inline-block;
 	font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
 		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-	font-size: 14px;
+	font-size: 2rem;
 	font-weight: 600;
 	line-height: 20px;
 	padding: 6px 16px;

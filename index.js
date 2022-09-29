@@ -5,6 +5,9 @@ const scoreTag = document.querySelector('#score');
 const btnContainer = document.querySelector('#btn-container');
 let state = initialState();
 
+if (!navigator.userAgentData.mobile) {
+	//	btnContainer.style.display = 'none';
+}
 const x = (c) => Math.round((c * canvas.width) / state.cols);
 const y = (r) => Math.round((r * canvas.height) / state.rows);
 
