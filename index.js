@@ -2,6 +2,7 @@ console.log('hi mom!', random(0, 5, false));
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const scoreTag = document.querySelector('#score');
+const btnContainer = document.querySelector('#btn-container');
 let state = initialState();
 
 const x = (c) => Math.round((c * canvas.width) / state.cols);
@@ -38,6 +39,13 @@ const step = (t1) => (t2) => {
 	}
 };
 
+btnContainer.addEventListener('click', (event) => {
+	if (event.target.nodeName === 'BUTTON') {
+		const direction = event.target.dataset.direction;
+		console.log('direction', direction);
+		state = queueNextMove(state, coordinates[direction]);
+	}
+});
 window.addEventListener('keydown', (e) => {
 	switch (e.key) {
 		case 'w':

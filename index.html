@@ -6,6 +6,16 @@
 		<p>Snake Game</p>
 		<p>Score: <span id="score">0</span></p>
 		<canvas id="canvas" width="700" height="500"> </canvas>
+		<section id="btn-container">
+			<div><button class="btn" id="btn-up" data-direction="UP">UP</button></div>
+			<div id="side-btn-container">
+				<button class="btn" id="btn-left" data-direction="LEFT">LEFT</button>
+				<button class="btn" id="btn-right" data-direction="RIGHT">RIGHT</button>
+			</div>
+			<div>
+				<button class="btn" id="btn-down" data-direction="DOWN">DOWN</button>
+			</div>
+		</section>
 	</body>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.28.0/ramda.min.js"></script>
 	<script src="snake.js" defer></script>
