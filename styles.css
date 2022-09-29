@@ -25,7 +25,7 @@ canvas {
 #side-btn-container {
 	display: flex;
 	width: 100%;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 /* CSS */
